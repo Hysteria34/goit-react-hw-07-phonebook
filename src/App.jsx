@@ -9,11 +9,11 @@ import Loader from './components/Loader';
 import s from './App.module.css'
 
 export default function App() {
-  const { data: contacts, isFetching} = useFetchContactsQuery();
+  //const { data: contacts, isFetching} = useFetchContactsQuery();
 
   return (
     <Container><h1 className={s.title}>Phonebook</h1>
-    <ContactForm contacts={contacts} />
+    <ContactForm/>
 
     <h2 className={s.title}>Contacts</h2>
     <Filter />
