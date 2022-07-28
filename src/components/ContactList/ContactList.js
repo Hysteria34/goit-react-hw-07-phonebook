@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 
 import s from './ContactList.module.css';
 
-export default function ContactsList({ contacts }) {
+export default function ContactsList(){
   const filterValue = useSelector(state => state.filter);
 
   const [deleteContact] = useDeleteContactMutation();
