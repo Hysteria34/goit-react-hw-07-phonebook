@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useAddContactMutation } from '../../services/contactsAPI';
+import { useFetchContactsQuery } from '../../services/contactsAPI';
 import propTypes from 'prop-types';
 
 import s from './ContactForm.module.css';
 
-export default function ContactsForm({ contacts }) {
+export default function ContactsForm() {
+  const { data: contacts} = useFetchContactsQuery();
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
