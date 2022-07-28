@@ -1,3 +1,4 @@
+import { useFetchContactsQuery } from './services/contactsAPI';
 import Container from './components/Container'
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList/';
