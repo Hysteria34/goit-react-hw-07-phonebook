@@ -7,14 +7,14 @@ import Loader from './components/Loader';
 import s from './App.module.css'
 
 export default function App() {
-
+const { isFetching} = useFetchContactsQuery();
   return (
     <Container><h1 className={s.title}>Phonebook</h1>
     <ContactForm/>
 
     <h2 className={s.title}>Contacts</h2>
     <Filter />
-    <Loader />
+    {isFetching && <Loader />}
     <ContactList/></Container>
   );
 }
